@@ -2,11 +2,11 @@
 import PuzzleTile from './PuzzleTile.vue';
 import { useStore } from '../../../store/store';
 
-const {state} = useStore();
+const { puzzleConfig } = useStore();
 </script>
 
 <template>
-  <ul class="row" v-for="( puzzleRow, index ) in state.rows" :key="index">
+  <ul class="row" v-for="( puzzleRow, index ) in puzzleConfig.rows" :key="index">
     <li>
       <span>{{ index + 1 }}.</span>
     </li>

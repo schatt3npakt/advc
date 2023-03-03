@@ -9,14 +9,15 @@ ___
 
 Rätselconfig:
 {
-  initText: "Lorem Ipsum"
+  initText: "Lorem Ipsum",
   completionText: "Lorem Ipsum",
   sorting: "3124",
   maxInputs: 10,
   rows: [
     ["UP", "DOWN", "LEFT", "RIGHT", "REPEAT"],
     ["DOWN", "DOWN", "UP", "UP", "RIGHT"]
-  ]
+  ],
+  solution: "UPDOWNLEFTRIGHTUPUPDOWN"
 }
 
 Possible values:
@@ -68,7 +69,6 @@ Rätselstate
 {
   numberOfInputs: 0,
   state: "UPDOWNUP",
-  solution: "UPDOWNLEFTRIGHTUPUPDOWN"...
 }
 
 ___
