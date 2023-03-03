@@ -1,32 +1,34 @@
 <script setup>
 import PuzzleTile from './PuzzleTile.vue';
+import { useStore } from '../../../store/store';
+
+const {state} = useStore();
 </script>
 
 <template>
-  <div class="row">
-    <div>
-      <span>1.</span>
-    </div>
-    <PuzzleTile />
-    <PuzzleTile />
-    <PuzzleTile />
-    <PuzzleTile />
-    <PuzzleTile />
-    <PuzzleTile />
-  </div>
+  <ul class="row" v-for="( puzzleRow, index ) in state.rows" :key="index">
+    <li>
+      <span>{{ index + 1 }}.</span>
+    </li>
+    <li v-for="(rowItem, index) in puzzleRow" :key="index">
+      <PuzzleTile :text="rowItem" />
+    </li>
+  </ul>
 </template>
 
 <style scoped>
-div {
-  position: relative
-}
-
-.row {
+ul.row {
   margin: auto;
   display: grid;
   grid-template-columns: repeat(7, 1fr);
   gap: 8px;
   margin-bottom: 8px;
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  position: relative
 }
 
 span {

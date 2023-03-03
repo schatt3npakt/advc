@@ -1,13 +1,15 @@
 <script setup>
+const props = defineProps({
+  text: String
+})
 </script>
 
 <template>
-  <div class="tile"></div>
+  <div>{{ props.text }}</div>
 </template>
 
 <style scoped>
-.tile {
-  background-color: red;
+div {
   height: 32px;
   width: 32px;
 }

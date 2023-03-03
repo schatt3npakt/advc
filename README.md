@@ -9,8 +9,9 @@ ___
 
 Rätselconfig:
 {
+  initText: "Lorem Ipsum"
   completionText: "Lorem Ipsum",
-  sorting: "312",
+  sorting: "3124",
   maxInputs: 10,
   rows: [
     ["UP", "DOWN", "LEFT", "RIGHT", "REPEAT"],
