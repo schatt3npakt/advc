@@ -1,9 +1,9 @@
 <script setup>
 import SrOnly from '../../../components/SrOnly.vue';
-import { useStore } from '../../../store/store';
+import { usePuzzleStateStore } from '../../../store/puzzleState';
 import PuzzleTile from "./PuzzleTile.vue";
 
-const { puzzleState } = useStore();
+const puzzleState = usePuzzleStateStore();
 </script>
 
 <template>

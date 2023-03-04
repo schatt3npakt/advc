@@ -1,7 +1,7 @@
 <script setup>
-import { useStore } from '../../../store/store';
+import { usePuzzleStateStore } from '../../../store/puzzleState';
 
-const { puzzleState, appendToPuzzleState, removeFromPuzzleState } = useStore()
+const puzzleState = usePuzzleStateStore()
 const props = defineProps({
   text: String,
   type: String,
@@ -10,10 +10,10 @@ const props = defineProps({
 function clickHandler (handlerInput) {
   switch (props.type) {
     case "add":
-      appendToPuzzleState(handlerInput)
+      puzzleState.appendToPuzzleState(handlerInput)
       break;
     case "remove":
-      removeFromPuzzleState()
+      puzzleState.removeFromPuzzleState()
       break;
   }
 }
