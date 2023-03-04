@@ -24,9 +24,14 @@ export const useStore = defineStore("store", () => {
     puzzleState.value.isPuzzleSolved = puzzleState.value.state.join("") === puzzleConfig.value.solution
   }
 
+  function removeFromPuzzleState () {
+    puzzleState.value.state.pop()
+  }
+
   return {
     puzzleConfig,
     puzzleState,
-    appendToPuzzleState
+    appendToPuzzleState,
+    removeFromPuzzleState
   }
 })
