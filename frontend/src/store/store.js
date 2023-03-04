@@ -6,8 +6,7 @@ export const useStore = defineStore("store", () => {
   const appState = ref({
     currentPuzzleIndex: 0
   })
-  let puzzleConfig = ref(null)
-  puzzleConfig.value = allPuzzles[appState.value.currentPuzzleIndex]
+  let puzzleConfig = ref(allPuzzles[appState.value.currentPuzzleIndex])
 
   const initialPuzzleState = {
     isPuzzleSolved: false,
