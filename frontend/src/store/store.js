@@ -7,20 +7,26 @@ export const useStore = defineStore("store", () => {
     initText: "Lorem Ipsum",
     maxInputs: 10,
     rows: [
-      ["UP", "DOWN", "LEFT", "RIGHT", "REPEAT"],
-      ["DOWN", "DOWN", "UP", "UP", "RIGHT"]
+      ["UP", "DOWN", "LEFT", "RIGHT", "RIGHT", "DOWN"]
     ],
     sorting: "3124",
-    solution: "UPDOWNLEFTRIGHTUPUPDOWN"
+    solution: "UPDOWNLEFTRIGHTRIGHTDOWN",
   })
 
   const puzzleState = ref({
+    isPuzzleSolved: false,
     numberOfInputs: 0,
-    state: "",
+    state: [],
   })
+
+  function appendToPuzzleState (input) {
+    puzzleState.value.state.push(input)
+    puzzleState.value.isPuzzleSolved = puzzleState.value.state.join("") === puzzleConfig.value.solution
+  }
 
   return {
     puzzleConfig,
-    puzzleState
+    puzzleState,
+    appendToPuzzleState
   }
 })

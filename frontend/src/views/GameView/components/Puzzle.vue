@@ -7,28 +7,29 @@ const { puzzleConfig } = useStore();
 
 <template>
   <ul class="row" v-for="( puzzleRow, index ) in puzzleConfig.rows" :key="index">
-    <li>
+    <li v-if="puzzleConfig.rows.length >= 2">
       <span>{{ index + 1 }}.</span>
     </li>
     <li v-for="(rowItem, index) in puzzleRow" :key="index">
-      <PuzzleTile :text="rowItem" />
+      <PuzzleTile :type="rowItem" />
     </li>
   </ul>
 </template>
 
 <style scoped>
 ul.row {
-  margin: auto;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
   gap: 8px;
-  margin-bottom: 8px;
+  grid-template-columns: repeat(7, 1fr);
   list-style-type: none;
+  margin-bottom: 8px;
+  margin: auto;
   padding: 0;
 }
 
 li {
-  position: relative
+  color: var(--primary-color-dark);
+  position: relative;
 }
 
 span {

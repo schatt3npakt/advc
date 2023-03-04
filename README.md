@@ -2,7 +2,7 @@
 
 ADVC is a simple puzzle game where users solve sequences by entering for buttons, ▲ ▶ ▼ ◀. Additional symbols add complexity to the riddles. After solving puzzles, a bit of text can be displayed to give an overarching story.
 
-1. [▲] [▼] [◀] [▶] [R]
+1. [▲] [▼] [◀] [▶] [▶]
 2. [▼] [▼] [▲] [▲] [▶]
 
 ___
