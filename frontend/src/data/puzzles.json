@@ -1,5 +1,6 @@
 [
   {
+    "id": 0,
     "completionText": "Lorem Ipsum",
     "initText": "Lorem Ipsum",
     "maxInputs": 10,
@@ -8,6 +9,7 @@
     "solution": "UPDOWNLEFTRIGHTRIGHTDOWN"
   },
   {
+    "id": 1,
     "completionText": "Lorem Ipsum",
     "initText": "Lorem Ipsum",
     "maxInputs": 10,

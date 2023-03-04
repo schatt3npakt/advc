@@ -79,3 +79,7 @@ Views:
 - Level select
 - About
 - Options
+
+___
+
+Combine this game with Return of Obra dinn style mystery, users solve puzzles as an agent to clarify the fates of corpses
