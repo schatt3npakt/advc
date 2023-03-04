@@ -1,0 +1,18 @@
+[
+  {
+    "completionText": "Lorem Ipsum",
+    "initText": "Lorem Ipsum",
+    "maxInputs": 10,
+    "rows": [["UP", "DOWN", "LEFT", "RIGHT", "RIGHT", "DOWN"]],
+    "sorting": "3124",
+    "solution": "UPDOWNLEFTRIGHTRIGHTDOWN"
+  },
+  {
+    "completionText": "Lorem Ipsum",
+    "initText": "Lorem Ipsum",
+    "maxInputs": 10,
+    "rows": [["UP"]],
+    "sorting": "3124",
+    "solution": "UP"
+  }
+]
