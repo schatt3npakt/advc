@@ -21,7 +21,7 @@ const { puzzleState } = useStore();
 
 <style scoped>
 .wrapper {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 .row {
   display: grid;

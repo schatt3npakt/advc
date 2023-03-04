@@ -20,7 +20,7 @@ const { puzzleConfig } = useStore();
 
 <style scoped>
 div.wrapper {
-  margin-bottom: 16px;
+  margin-bottom: 32px;
 }
 ul.row {
   display: grid;
