@@ -14,9 +14,13 @@ export const usePuzzleStateStore = defineStore('puzzleState', {
 
   actions: {
     appendToPuzzleState (input) {
+      const puzzleConfig = usePuzzleConfigStore();
       this.numberOfInputs++
       this.state.push(input)
-      this.checkForSuccess()
+
+      if (this.numberOfInputs === puzzleConfig.config.maxInputs) {
+        this.checkForSuccess();
+      }
     },
     removeFromPuzzleState () {
       this.state.pop()
@@ -29,15 +33,16 @@ export const usePuzzleStateStore = defineStore('puzzleState', {
       // run success handler
       // move timout into app options store
       if (this.isPuzzleSolved === true) {
-        window.setTimeout(() => {
-          // TODO: Refactor this
-          this.isPuzzleSolved = false
-          this.numberOfInputs = 0
-          this.state = []
+        // TODO: Refactor this
+        this.isPuzzleSolved = false
+        this.numberOfInputs = 0
+        this.state = []
 
-          appState.incrementPuzzleIndex()
-          puzzleConfig.loadNewConfig(appState.currentPuzzleIndex)
-        }, 1000)
+        appState.incrementPuzzleIndex()
+        puzzleConfig.loadNewConfig(appState.currentPuzzleIndex)
+      } else {
+        this.numberOfInputs = 0
+        this.state = []
       }
     }
   },

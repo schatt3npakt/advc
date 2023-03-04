@@ -1,7 +1,12 @@
 <script setup>
+import { usePuzzleConfigStore } from './store/puzzleConfig';
 import PlayerInputs from './views/GameView/components/PlayerInputs.vue';
 import PlayerSolution from './views/GameView/components/PlayerSolution.vue';
 import Puzzle from './views/GameView/components/Puzzle.vue';
+
+const puzzleStore = usePuzzleConfigStore();
+
+puzzleStore.loadNewConfig(0);
 </script>
 
 <template>

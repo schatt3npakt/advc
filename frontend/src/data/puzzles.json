@@ -3,18 +3,16 @@
     "id": 0,
     "completionText": "Lorem Ipsum",
     "initText": "Lorem Ipsum",
-    "maxInputs": 10,
+    "maxInputs": 4,
     "rows": [["UP", "DOWN", "LEFT", "RIGHT"]],
-    "sorting": "3124",
-    "solution": "UPDOWNLEFTRIGHT"
+    "sorting": "3124"
   },
   {
     "id": 1,
     "completionText": "Lorem Ipsum",
     "initText": "Lorem Ipsum",
-    "maxInputs": 10,
+    "maxInputs": 6,
     "rows": [["DOWN", "DOWN", "DOWN", "DOWN", "DOWN", "DOWN"]],
-    "sorting": "3124",
-    "solution": "DOWNDOWNDOWNDOWNDOWNDOWN"
+    "sorting": "3124"
   }
 ]
