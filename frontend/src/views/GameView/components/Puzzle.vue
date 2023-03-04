@@ -1,13 +1,17 @@
 <script setup>
-import PuzzleTile from './PuzzleTile.vue';
-import { usePuzzleConfigStore } from '../../../store/puzzleConfig.js';
+  import PuzzleTile from "./PuzzleTile.vue";
+  import { usePuzzleConfigStore } from "../../../store/puzzleConfig.js";
 
-const puzzleConfig = usePuzzleConfigStore();
+  const puzzleConfig = usePuzzleConfigStore();
 </script>
 
 <template>
   <div class="wrapper">
-    <ul class="row" v-for="( puzzleRow, index ) in puzzleConfig.config.rows" :key="index">
+    <ul
+      class="row"
+      v-for="(puzzleRow, index) in puzzleConfig.config.rows"
+      :key="puzzleRow"
+    >
       <li v-if="puzzleConfig.config.rows.length >= 2">
         <span>{{ index + 1 }}.</span>
       </li>
@@ -19,31 +23,31 @@ const puzzleConfig = usePuzzleConfigStore();
 </template>
 
 <style scoped>
-div.wrapper {
-  margin-bottom: 32px;
-}
-ul.row {
-  display: grid;
-  gap: 8px;
-  grid-template-columns: repeat(7, 1fr);
-  list-style-type: none;
-  margin: auto;
-  padding: 0;
-}
+  div.wrapper {
+    margin-bottom: 32px;
+  }
+  ul.row {
+    display: grid;
+    gap: 8px;
+    grid-template-columns: repeat(7, 1fr);
+    list-style-type: none;
+    margin: auto;
+    padding: 0;
+  }
 
-ul.row:not(:last-of-type) {
-  margin-bottom: 8px;
-}
+  ul.row:not(:last-of-type) {
+    margin-bottom: 8px;
+  }
 
-li {
-  color: var(--primary-color-dark);
-  position: relative;
-}
+  li {
+    color: var(--primary-color-dark);
+    position: relative;
+  }
 
-span {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
+  span {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 </style>
