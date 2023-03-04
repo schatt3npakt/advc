@@ -1,12 +1,13 @@
 import { defineStore } from "pinia";
 import { ref } from "vue"
 import allPuzzles from "../data/puzzles.json"
+import { usePuzzleConfigStore } from "./puzzleConfig";
 
 export const useStore = defineStore("store", () => {
+  const puzzleConfig = usePuzzleConfigStore();
   const appState = ref({
     currentPuzzleIndex: 0
   })
-  let puzzleConfig = ref(allPuzzles[appState.value.currentPuzzleIndex])
 
   const initialPuzzleState = {
     isPuzzleSolved: false,
@@ -26,7 +27,7 @@ export const useStore = defineStore("store", () => {
   }
 
   function checkForSuccess () {
-    puzzleState.value.isPuzzleSolved = puzzleState.value.state.join("") === puzzleConfig.value.solution
+    puzzleState.value.isPuzzleSolved = puzzleState.value.state.join("") === puzzleConfig.config.solution
 
     // run success handler
     if (puzzleState.value.isPuzzleSolved === true) {
@@ -42,13 +43,12 @@ export const useStore = defineStore("store", () => {
           appState.value.currentPuzzleIndex = 0
         }
 
-        puzzleConfig.value = allPuzzles[appState.value.currentPuzzleIndex]
+        puzzleConfig.loadNewConfig(appState.value.currentPuzzleIndex)
       }, 1000)
     }
   }
 
   return {
-    puzzleConfig,
     puzzleState,
     appendToPuzzleState,
     removeFromPuzzleState

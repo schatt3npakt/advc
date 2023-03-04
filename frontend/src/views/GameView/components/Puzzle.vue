@@ -1,14 +1,14 @@
 <script setup>
 import PuzzleTile from './PuzzleTile.vue';
-import { useStore } from '../../../store/store';
+import { usePuzzleConfigStore } from '../../../store/puzzleConfig.js';
 
-const { puzzleConfig } = useStore();
+const puzzleConfig = usePuzzleConfigStore();
 </script>
 
 <template>
   <div class="wrapper">
-    <ul class="row" v-for="( puzzleRow, index ) in puzzleConfig.rows" :key="index">
-      <li v-if="puzzleConfig.rows.length >= 2">
+    <ul class="row" v-for="( puzzleRow, index ) in puzzleConfig.config.rows" :key="index">
+      <li v-if="puzzleConfig.config.rows.length >= 2">
         <span>{{ index + 1 }}.</span>
       </li>
       <li v-for="(rowItem, index) in puzzleRow" :key="index">
