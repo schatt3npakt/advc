@@ -7,28 +7,36 @@ const { puzzleState } = useStore();
 </script>
 
 <template>
-  <SrOnly :text="'Your solution'" />
-  <div class="row">
-    <PuzzleTile
-      v-for="(puzzleStateInput, index) in puzzleState.state"
-      :key="index"
-      :type="puzzleStateInput"
-    />
+  <div class="wrapper">
+    <SrOnly :text="'Your solution'" />
+    <div class="row">
+      <PuzzleTile
+        v-for="(puzzleStateInput, index) in puzzleState.state"
+        :key="index"
+        :type="puzzleStateInput"
+      />
+    </div>
   </div>
 </template>
 
 <style scoped>
+.wrapper {
+  margin-bottom: 16px;
+}
 .row {
   display: grid;
   gap: 8px;
   grid-template-columns: repeat(7, 1fr);
   list-style-type: none;
-  margin-bottom: 8px;
   margin: auto;
   max-width: 100%;
   min-height: 32px;
   overflow: auto;
   padding: 0;
+}
+
+ul.row:not(:last-of-type) {
+  margin-bottom: 8px;
 }
 
 .row p {

@@ -13,19 +13,35 @@ export const useStore = defineStore("store", () => {
     solution: "UPDOWNLEFTRIGHTRIGHTDOWN",
   })
 
-  const puzzleState = ref({
+  const initialPuzzleState = {
     isPuzzleSolved: false,
     numberOfInputs: 0,
     state: [],
-  })
+  }
+
+  const puzzleState = ref(initialPuzzleState)
 
   function appendToPuzzleState (input) {
     puzzleState.value.state.push(input)
-    puzzleState.value.isPuzzleSolved = puzzleState.value.state.join("") === puzzleConfig.value.solution
+    checkForSuccess()
   }
 
   function removeFromPuzzleState () {
     puzzleState.value.state.pop()
+  }
+
+  function checkForSuccess () {
+    puzzleState.value.isPuzzleSolved = puzzleState.value.state.join("") === puzzleConfig.value.solution
+
+    // run success handler
+    if (puzzleState.value.isPuzzleSolved === true) {
+      window.setTimeout(() => {
+        // TODO: Refactor this
+        puzzleState.value.isPuzzleSolved = false
+        puzzleState.value.numberOfInputs = 0
+        puzzleState.value.state = []
+      }, 1000)
+    }
   }
 
   return {

@@ -34,5 +34,6 @@ import Puzzle from './views/GameView/components/Puzzle.vue';
 
 body {
   background-color: var(--primary-color-light);
+  margin: 8px;
 }
 </style>

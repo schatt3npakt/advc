@@ -19,6 +19,8 @@ div {
   position: relative;
   height: 32px;
   width: 32px;
+  margin: 0;
+  padding: 0;
 }
 
 div::after {

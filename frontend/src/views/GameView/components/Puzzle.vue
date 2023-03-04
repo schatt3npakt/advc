@@ -6,25 +6,33 @@ const { puzzleConfig } = useStore();
 </script>
 
 <template>
-  <ul class="row" v-for="( puzzleRow, index ) in puzzleConfig.rows" :key="index">
-    <li v-if="puzzleConfig.rows.length >= 2">
-      <span>{{ index + 1 }}.</span>
-    </li>
-    <li v-for="(rowItem, index) in puzzleRow" :key="index">
-      <PuzzleTile :type="rowItem" />
-    </li>
-  </ul>
+  <div class="wrapper">
+    <ul class="row" v-for="( puzzleRow, index ) in puzzleConfig.rows" :key="index">
+      <li v-if="puzzleConfig.rows.length >= 2">
+        <span>{{ index + 1 }}.</span>
+      </li>
+      <li v-for="(rowItem, index) in puzzleRow" :key="index">
+        <PuzzleTile :type="rowItem" />
+      </li>
+    </ul>
+  </div>
 </template>
 
 <style scoped>
+div.wrapper {
+  margin-bottom: 16px;
+}
 ul.row {
   display: grid;
   gap: 8px;
   grid-template-columns: repeat(7, 1fr);
   list-style-type: none;
-  margin-bottom: 8px;
   margin: auto;
   padding: 0;
+}
+
+ul.row:not(:last-of-type) {
+  margin-bottom: 8px;
 }
 
 li {
