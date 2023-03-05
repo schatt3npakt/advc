@@ -23,5 +23,21 @@
       ["DOWN", "UP", "UP", "RIGHT", "LEFT", "UP", "RIGHT"]
     ],
     "sorting": "3124"
+  },
+  {
+    "id": 3,
+    "maxInputs": 6,
+    "rows": [
+      ["LEFT", "UP", "RIGHT", "LEFT", "UP", "RIGHT"]
+    ],
+    "sorting": "3124"
+  },
+  {
+    "id": 4,
+    "maxInputs": 7,
+    "rows": [
+      ["RIGHT", "LEFT", "UP", "UP", "LEFT", "DOWN", "RIGHT"]
+    ],
+    "sorting": "3124"
   }
 ]
