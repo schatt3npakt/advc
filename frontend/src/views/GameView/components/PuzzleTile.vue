@@ -28,12 +28,28 @@ div::after {
   display: block;
   width: 0;
 	height: 0;
-	border-left: 10px solid transparent;
-	border-right: 10px solid transparent;
-	border-bottom: 19px solid var(--primary-color-dark);;
   position: absolute;
   inset: 50%;
   transform-origin: center center;
+}
+
+div.repeat::after {
+  background-color: var(--primary-color-dark);
+  height: 20px;
+  transform: translate(-50%, -50%);
+  width: 20px;
+}
+
+div.up::after,
+div.right::after,
+div.down::after,
+div.left::after {
+  border-left: 10px solid transparent;
+	border-right: 10px solid transparent;
+	border-bottom: 19px solid var(--primary-color-dark);
+}
+
+div.up::after {
   transform: translate(-50%, -50%);
 }
 

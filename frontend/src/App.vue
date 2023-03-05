@@ -13,6 +13,13 @@ puzzleStore.loadNewConfig(0);
 
 <template>
   <main>
+    <TextLayer
+      v-if="puzzleStore.config.initText"
+      :show="true"
+      :key="puzzleStore.config.initText"
+      :text="puzzleStore.config.initText"
+    />
+
     <Puzzle />
 
     <PlayerSolution />

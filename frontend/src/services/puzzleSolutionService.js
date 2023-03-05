@@ -8,11 +8,22 @@ export const solvePuzzle = (puzzle, charLimit) => {
   }
 
   for (let i = 0; i < charLimit; i++) {
+    const currentCommand = puzzle[rowIterator][rowItemsIterators[rowIterator]]
+
+    // On repeat keyword, reset iterator for the current row
+    if (currentCommand === "REPEAT") {
+        i--
+        rowItemsIterators[rowIterator] = 0
+        continue
+    }
+
+    console.log(currentCommand)
+
     // the riddles are read top to bottom, left to right
     // The solution is constructed by accessing the value of row 0 at position 0,
     // then row 1 at position 0,
     // then row 0 at position 1 and so on.
-    solutionString += puzzle[rowIterator][rowItemsIterators[rowIterator]]
+    solutionString += currentCommand
 
     // increase current row item iterator if items in row are nor exceeded, else reset
     if (rowItemsIterators[rowIterator] < puzzle[rowIterator].length -1) {

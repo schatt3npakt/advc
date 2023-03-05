@@ -1,16 +1,26 @@
 [
   {
     "id": 0,
-    "maxInputs": 4,
-    "rows": [["UP", "DOWN", "LEFT", "RIGHT"]],
+    "initText": "Input the combination using the buttons 'UP', 'DOWN', 'LEFT' and 'RIGHT'",
+    "maxInputs": 5,
+    "rows": [
+      ["LEFT", "RIGHT", "UP", "DOWN", "RIGHT"]
+    ],
     "sorting": "3124"
   },
   {
     "id": 1,
-    "maxInputs": 6,
+    "maxInputs": 5,
     "rows": [
-      ["UP", "DOWN", "DOWN", "DOWN", "DOWN", "DOWN"],
-      ["UP", "UP", "LEFT"]
+      ["RIGHT", "DOWN", "LEFT", "LEFT", "UP"]
+    ],
+    "sorting": "3124"
+  },
+  {
+    "id": 2,
+    "maxInputs": 7,
+    "rows": [
+      ["DOWN", "UP", "UP", "RIGHT", "LEFT", "UP", "RIGHT"]
     ],
     "sorting": "3124"
   }

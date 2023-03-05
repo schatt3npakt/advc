@@ -17,7 +17,7 @@ function clickHandler () {
   <div class="wrapper" v-show="showLayer">
     <div class="inner">
       <p>{{ props.text }}</p>
-      <button @click="clickHandler()">Close layer</button>
+      <button @click="clickHandler()">Continue</button>
     </div>
   </div>
 </template>
