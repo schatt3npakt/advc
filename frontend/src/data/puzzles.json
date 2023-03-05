@@ -1,8 +1,6 @@
 [
   {
     "id": 0,
-    "completionText": "Das ist der Endtext",
-    "initText": "Das ist der Starttext",
     "maxInputs": 4,
     "rows": [["UP", "DOWN", "LEFT", "RIGHT"]],
     "sorting": "3124"
@@ -11,8 +9,8 @@
     "id": 1,
     "maxInputs": 6,
     "rows": [
-      ["DOWN", "DOWN", "DOWN", "DOWN", "DOWN", "DOWN"],
-      ["UP", "UP"]
+      ["UP", "DOWN", "DOWN", "DOWN", "DOWN", "DOWN"],
+      ["UP", "UP", "LEFT"]
     ],
     "sorting": "3124"
   }

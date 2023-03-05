@@ -83,3 +83,5 @@ Views:
 ___
 
 Combine this game with Return of Obra dinn style mystery, users solve puzzles as an agent to clarify the fates of corpses
+
+You are MAX CYBER, the computer specialist at the best CSI Lab lab in the city. Solve puzzles to fulfill tasks set by your colleagues, and catch criminals! -> BYPASSING FIREWALL

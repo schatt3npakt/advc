@@ -35,4 +35,8 @@ function clickHandler () {
 .wrapper .inner {
   padding: 8px;
 }
+
+.wrapper .inner p:not(:last-child) {
+  margin-bottom: 16px;
+}
 </style>
