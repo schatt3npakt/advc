@@ -2,7 +2,7 @@
   {
     "id": 0,
     "completionText": "Lorem Ipsum",
-    "initText": "Lorem Ipsum",
+    "initText": "Das ist der Starttext",
     "maxInputs": 4,
     "rows": [["UP", "DOWN", "LEFT", "RIGHT"]],
     "sorting": "3124"

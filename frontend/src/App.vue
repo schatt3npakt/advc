@@ -1,5 +1,6 @@
 <script setup>
 import { usePuzzleConfigStore } from './store/puzzleConfig';
+import TextLayer from './views/GameView/components/TextLayer.vue';
 import PlayerInputs from './views/GameView/components/PlayerInputs.vue';
 import PlayerSolution from './views/GameView/components/PlayerSolution.vue';
 import Puzzle from './views/GameView/components/Puzzle.vue';
@@ -12,9 +13,12 @@ puzzleStore.loadNewConfig(0);
 
 <template>
   <main>
-    <div class="inittext">
-      {{ puzzleStore.config.initText }}
-    </div>
+    <TextLayer
+      v-if="puzzleStore.config.initText"
+      :show="true"
+      :key="puzzleStore.config.initText"
+      :text="puzzleStore.config.initText"
+    />
 
     <Puzzle />
 
@@ -47,13 +51,5 @@ body {
   margin: 8px;
 }
 
-.inittext {
-  background-color: var(--primary-color-light);
-  position: fixed;
-  inset: 0;
-  height: 100vh;
-  width: 100vw;
-  padding: 8px;
-  z-index: 1;
-}
+
 </style>
