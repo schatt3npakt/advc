@@ -39,5 +39,43 @@
       ["RIGHT", "LEFT", "UP", "UP", "LEFT", "DOWN", "RIGHT"]
     ],
     "sorting": "3124"
+  },
+  {
+    "id": 5,
+    "initText": "Rows are executed from top to bottom, left to right, for example row 1 icon 1, row 2 Icon 1, row 1 Icon 2 etc.",
+    "maxInputs": 10,
+    "rows": [
+      ["LEFT", "RIGHT", "UP", "DOWN", "RIGHT"],
+      ["RIGHT", "DOWN", "LEFT", "UP", "LEFT"]
+    ],
+    "sorting": "3124"
+  },
+  {
+    "id": 6,
+    "maxInputs": 10,
+    "rows": [
+      ["UP", "UP", "DOWN", "LEFT", "RIGHT"],
+      ["LEFT", "LEFT", "RIGHT", "UP", "DOWN"]
+    ],
+    "sorting": "3124"
+  },
+  {
+    "id": 7,
+    "initText": "At the end of a row, the row starts over from the left side.",
+    "maxInputs": 12,
+    "rows": [
+      ["RIGHT", "DOWN", "LEFT"],
+      ["DOWN", "LEFT", "RIGHT", "DOWN", "UP"]
+    ],
+    "sorting": "3124"
+  },
+  {
+    "id": 8,
+    "maxInputs": 9,
+    "rows": [
+      ["RIGHT", "DOWN", "LEFT", "UP"],
+      ["DOWN", "LEFT"]
+    ],
+    "sorting": "3124"
   }
 ]

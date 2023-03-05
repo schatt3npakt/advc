@@ -9,6 +9,9 @@ export const useAppStateStore = defineStore("appState", {
   },
 
   actions: {
+    setPuzzleIndex(int) {
+      this.currentPuzzleIndex = int
+    },
     incrementPuzzleIndex() {
       if (allPuzzles.length === (this.currentPuzzleIndex + 1)) {
         this.currentPuzzleIndex = 0
