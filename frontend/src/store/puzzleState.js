@@ -18,7 +18,7 @@ export const usePuzzleStateStore = defineStore('puzzleState', {
       this.numberOfInputs++
       this.state.push(input)
 
-      if (this.numberOfInputs === puzzleConfig.config.maxInputs) {
+      if (this.state.length === puzzleConfig.config.maxInputs) {
         this.checkForSuccess();
       }
     },

@@ -6,6 +6,7 @@ import Puzzle from './views/GameView/components/Puzzle.vue';
 
 const puzzleStore = usePuzzleConfigStore();
 
+// init first puzzle
 puzzleStore.loadNewConfig(0);
 </script>
 
