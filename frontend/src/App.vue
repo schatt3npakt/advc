@@ -12,6 +12,10 @@ puzzleStore.loadNewConfig(0);
 
 <template>
   <main>
+    <div class="inittext">
+      {{ puzzleStore.config.initText }}
+    </div>
+
     <Puzzle />
 
     <PlayerSolution />
@@ -41,5 +45,15 @@ puzzleStore.loadNewConfig(0);
 body {
   background-color: var(--primary-color-light);
   margin: 8px;
+}
+
+.inittext {
+  background-color: var(--primary-color-light);
+  position: fixed;
+  inset: 0;
+  height: 100vh;
+  width: 100vw;
+  padding: 8px;
+  z-index: 1;
 }
 </style>
