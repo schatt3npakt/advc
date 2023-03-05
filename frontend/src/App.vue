@@ -1,30 +1,10 @@
 <script setup>
-import { usePuzzleConfigStore } from './store/puzzleConfig';
-import TextLayer from './views/GameView/components/TextLayer.vue';
-import PlayerInputs from './views/GameView/components/PlayerInputs.vue';
-import PlayerSolution from './views/GameView/components/PlayerSolution.vue';
-import Puzzle from './views/GameView/components/Puzzle.vue';
-
-const puzzleStore = usePuzzleConfigStore();
-
-// init first puzzle
-puzzleStore.loadNewConfig(0);
+import { RouterView } from "vue-router";
 </script>
 
 <template>
   <main>
-    <TextLayer
-      v-if="puzzleStore.config.initText"
-      :show="true"
-      :key="puzzleStore.config.initText"
-      :text="puzzleStore.config.initText"
-    />
-
-    <Puzzle />
-
-    <PlayerSolution />
-
-    <PlayerInputs />
+    <RouterView />
   </main>
 </template>
 

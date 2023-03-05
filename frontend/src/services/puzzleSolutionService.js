@@ -17,8 +17,6 @@ export const solvePuzzle = (puzzle, charLimit) => {
         continue
     }
 
-    console.log(currentCommand)
-
     // the riddles are read top to bottom, left to right
     // The solution is constructed by accessing the value of row 0 at position 0,
     // then row 1 at position 0,
