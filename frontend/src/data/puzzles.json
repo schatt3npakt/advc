@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "completionText": "Lorem Ipsum",
+    "completionText": "Das ist der Endtext",
     "initText": "Das ist der Starttext",
     "maxInputs": 4,
     "rows": [["UP", "DOWN", "LEFT", "RIGHT"]],
@@ -9,10 +9,11 @@
   },
   {
     "id": 1,
-    "completionText": "Lorem Ipsum",
-    "initText": "Lorem Ipsum",
     "maxInputs": 6,
-    "rows": [["DOWN", "DOWN", "DOWN", "DOWN", "DOWN", "DOWN"]],
+    "rows": [
+      ["DOWN", "DOWN", "DOWN", "DOWN", "DOWN", "DOWN"],
+      ["UP", "UP"]
+    ],
     "sorting": "3124"
   }
 ]
