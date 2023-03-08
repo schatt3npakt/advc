@@ -18,7 +18,8 @@
   },
   {
     "id": 2,
-    "maxInputs": 7,
+    "initText": "At the end of a row, the row is repeated from the start.",
+    "maxInputs": 12,
     "rows": [
       ["DOWN", "UP", "UP", "RIGHT", "LEFT", "UP", "RIGHT"]
     ],
@@ -61,7 +62,6 @@
   },
   {
     "id": 7,
-    "initText": "At the end of a row, the row starts over from the left side.",
     "maxInputs": 12,
     "rows": [
       ["RIGHT", "DOWN", "LEFT"],

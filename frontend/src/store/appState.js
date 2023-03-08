@@ -4,7 +4,8 @@ import allPuzzles from "../data/puzzles.json"
 export const useAppStateStore = defineStore("appState", {
   state: () => {
     return {
-      currentPuzzleIndex: 0
+      currentPuzzleIndex: 0,
+      isEndlessModeEnabled: false
     }
   },
 
@@ -14,7 +15,8 @@ export const useAppStateStore = defineStore("appState", {
     },
     incrementPuzzleIndex() {
       if (allPuzzles.length === (this.currentPuzzleIndex + 1)) {
-        this.currentPuzzleIndex = 0
+        this.currentPuzzleIndex = false
+        this.isEndlessModeEnabled = true
       } else {
         this.currentPuzzleIndex++
       }

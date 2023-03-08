@@ -17,7 +17,6 @@ initKeyboardControls(puzzleStateStore);
 
 
 // init first puzzle
-
 if (route?.query?.puzzleId) {
   puzzleStore.loadNewConfig(route?.query?.puzzleId);
   appState.setPuzzleIndex(route?.query?.puzzleId)
@@ -27,6 +26,8 @@ if (route?.query?.puzzleId) {
 </script>
 
 <template>
+  <p class="endless-mode" v-show="appState.isEndlessModeEnabled">Endlessmode enabled</p>
+
   <TextLayer
     v-if="puzzleStore.config.initText"
     :show="true"
@@ -45,6 +46,10 @@ if (route?.query?.puzzleId) {
 
 <style scoped>
 .hint {
+  margin-bottom: 8px;
+}
+
+.endless-mode {
   margin-bottom: 8px;
 }
 </style>
