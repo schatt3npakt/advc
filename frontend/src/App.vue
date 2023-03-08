@@ -31,5 +31,10 @@ body {
   margin: 8px;
 }
 
+main {
+  width: 100%;
+  max-width: 360px;
+  margin: auto;
+}
 
 </style>
