@@ -3,6 +3,7 @@
   import { usePuzzleConfigStore } from "../../../store/puzzleConfig.js";
 
   const puzzleConfig = usePuzzleConfigStore();
+  const sortingArray = puzzleConfig.config.sorting.split("")
 </script>
 
 <template>
@@ -11,6 +12,7 @@
       class="row"
       v-for="(puzzleRow, index) in puzzleConfig.config.rows"
       :key="puzzleRow"
+      :style="`order: ${sortingArray[index]};`"
     >
       <li v-if="puzzleConfig.config.rows.length >= 2">
         <span>{{ index + 1 }}.</span>
@@ -25,17 +27,16 @@
 <style scoped>
   div.wrapper {
     margin-bottom: 32px;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
   }
   ul.row {
     display: grid;
     gap: 8px;
     grid-template-columns: repeat(7, 1fr);
     list-style-type: none;
-    margin: auto;
     padding: 0;
-  }
-
-  ul.row:not(:last-of-type) {
     margin-bottom: 8px;
   }
 

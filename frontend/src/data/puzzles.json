@@ -6,7 +6,7 @@
     "rows": [
       ["LEFT", "RIGHT", "UP", "DOWN", "RIGHT"]
     ],
-    "sorting": "3124"
+    "sorting": "1234"
   },
   {
     "id": 1,
@@ -14,7 +14,7 @@
     "rows": [
       ["RIGHT", "DOWN", "LEFT", "LEFT", "UP"]
     ],
-    "sorting": "3124"
+    "sorting": "1234"
   },
   {
     "id": 2,
@@ -23,7 +23,7 @@
     "rows": [
       ["DOWN", "UP", "UP", "RIGHT", "LEFT", "UP", "RIGHT"]
     ],
-    "sorting": "3124"
+    "sorting": "1234"
   },
   {
     "id": 3,
@@ -31,7 +31,7 @@
     "rows": [
       ["LEFT", "UP", "RIGHT", "LEFT", "UP", "RIGHT"]
     ],
-    "sorting": "3124"
+    "sorting": "1234"
   },
   {
     "id": 4,
@@ -39,17 +39,17 @@
     "rows": [
       ["RIGHT", "LEFT", "UP", "UP", "LEFT", "DOWN", "RIGHT"]
     ],
-    "sorting": "3124"
+    "sorting": "1234"
   },
   {
     "id": 5,
     "initText": "Rows are executed from top to bottom, left to right, for example row 1 icon 1, row 2 Icon 1, row 1 Icon 2 etc.",
-    "maxInputs": 10,
+    "maxInputs": 4,
     "rows": [
-      ["LEFT", "RIGHT", "UP", "DOWN", "RIGHT"],
-      ["RIGHT", "DOWN", "LEFT", "UP", "LEFT"]
+      ["LEFT", "RIGHT"],
+      ["RIGHT", "DOWN"]
     ],
-    "sorting": "3124"
+    "sorting": "1234"
   },
   {
     "id": 6,
@@ -58,7 +58,7 @@
       ["UP", "UP", "DOWN", "LEFT", "RIGHT"],
       ["LEFT", "LEFT", "RIGHT", "UP", "DOWN"]
     ],
-    "sorting": "3124"
+    "sorting": "1234"
   },
   {
     "id": 7,
@@ -67,7 +67,7 @@
       ["RIGHT", "DOWN", "LEFT"],
       ["DOWN", "LEFT", "RIGHT", "DOWN", "UP"]
     ],
-    "sorting": "3124"
+    "sorting": "1234"
   },
   {
     "id": 8,
@@ -76,6 +76,46 @@
       ["RIGHT", "DOWN", "LEFT", "UP"],
       ["DOWN", "LEFT"]
     ],
-    "sorting": "3124"
+    "sorting": "1234"
+  },
+  {
+    "id": 9,
+    "maxInputs": 18,
+    "rows": [
+      ["RIGHT", "DOWN", "LEFT", "UP"],
+      ["DOWN", "LEFT", "UP", "UP", "RIGHT"],
+      ["LEFT", "RIGHT"]
+    ],
+    "sorting": "1234"
+  },
+  {
+    "id": 10,
+    "maxInputs": 12,
+    "rows": [
+      ["DOWN", "RIGHT"],
+      ["RIGHT", "LEFT", "RIGHT", "DOWN", "UP"],
+      ["UP", "LEFT", "RIGHT"]
+    ],
+    "sorting": "1234"
+  },
+  {
+    "id": 11,
+    "initText": "Rows are executed in order. Be careful, sometimes that order is changed.",
+    "maxInputs": 10,
+    "rows": [
+      ["UP", "LEFT", "DOWN"],
+      ["RIGHT", "UP", "LEFT", "RIGHT"]
+    ],
+    "sorting": "4321"
+  },
+  {
+    "id": 12,
+    "maxInputs": 8,
+    "rows": [
+      ["LEFT", "LEFT", "UP"],
+      ["UP", "DOWN"],
+      ["UP"]
+    ],
+    "sorting": "3422"
   }
 ]

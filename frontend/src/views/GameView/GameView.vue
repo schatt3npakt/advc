@@ -26,7 +26,7 @@ if (route?.query?.puzzleId) {
 </script>
 
 <template>
-  <p class="endless-mode" v-show="appState.isEndlessModeEnabled">Endlessmode enabled</p>
+  <p class="endless-mode" v-show="appState.isEndlessModeEnabled">All puzzles solved. Now playing endless mode.</p>
 
   <TextLayer
     v-if="puzzleStore.config.initText"
@@ -46,7 +46,7 @@ if (route?.query?.puzzleId) {
 
 <style scoped>
 .hint {
-  margin-bottom: 8px;
+  margin-bottom: 32px;
 }
 
 .endless-mode {
