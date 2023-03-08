@@ -10,11 +10,10 @@ ___
 Rätselconfig:
 {
   initText: "Lorem Ipsum",
-  completionText: "Lorem Ipsum",
   sorting: "3124",
   maxInputs: 10,
   rows: [
-    ["UP", "DOWN", "LEFT", "RIGHT", "REPEAT"],
+    ["UP", "DOWN", "LEFT", "RIGHT"],
     ["DOWN", "DOWN", "UP", "UP", "RIGHT"]
   ],
   solution: "UPDOWNLEFTRIGHTUPUPDOWN"
@@ -25,16 +24,15 @@ Possible values:
 - DOWN
 - LEFT
 - RIGHT
-- REPEAT: Sets row iterator back to zero
 - BACK: -1 to row iterator, last value has to be entered twice
 - FORWARD: +1 to row iterator, next value is skipped
 
 Im Frontend können später noch die Reihenfolgen der Reihen vertauscht werden, um das Spiel zusätzlich zu erschweren:
 
-2. [▼] [▼] [▲] [▲] [▶]
-1. [▲] [▼] [◀] [▶] [R]
+1. [▼] [▼] [▲] [▲] [▶]
+2. [▲] [▼] [◀] [▶] [R]
 
-<!-- Später vielleicht Await = auf reihe warten, werte transformieren z.b. UP zu RIGHT -->
+Später vielleicht Await = auf reihe warten, werte transformieren z.b. UP zu RIGHT
 
 ___
 
