@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "initText": "Input the combination using the buttons 'UP', 'DOWN', 'LEFT' and 'RIGHT'. Or use the arrow keys on your keyboard",
+    "initText": "Input the combination using the buttons 'UP', 'DOWN', 'LEFT' and 'RIGHT'. Or use the arrow keys on your keyboard.",
     "maxInputs": 5,
     "rows": [
       ["LEFT", "RIGHT", "UP", "DOWN", "RIGHT"]

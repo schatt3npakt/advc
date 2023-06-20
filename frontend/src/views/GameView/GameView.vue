@@ -46,7 +46,9 @@ if (route?.query?.puzzleId) {
 
 <style scoped>
 .hint {
+  color: var(--primary-color-dark);
   margin-bottom: 32px;
+  font-size: 1.5rem;
 }
 
 .endless-mode {

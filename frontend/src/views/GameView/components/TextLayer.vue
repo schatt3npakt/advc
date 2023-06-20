@@ -25,18 +25,34 @@ function clickHandler () {
 <style scoped>
 .wrapper {
   background-color: var(--primary-color-light);
-  position: fixed;
-  inset: 0;
+  color: var(--primary-color-dark);
+  font-size: 1.5rem;
   height: 100vh;
+  inset: 0;
+  padding: 1rem;
+  position: fixed;
   width: 100vw;
   z-index: 1;
 }
 
 .wrapper .inner {
   padding: 8px;
+  max-width: 360px;
+  margin: auto;
 }
 
 .wrapper .inner p:not(:last-child) {
-  margin-bottom: 16px;
+  margin-bottom: 64px;
+}
+
+button {
+  background-color: var(--primary-color-dark);
+  border: none;
+  color: var(--primary-color-light);
+  font-weight: bold;
+  display: block;
+  padding: 8px;
+  width: 100%;
+  font-size: 1.2rem;
 }
 </style>

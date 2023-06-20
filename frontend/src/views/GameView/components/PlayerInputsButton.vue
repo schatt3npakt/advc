@@ -17,28 +17,39 @@ function clickHandler (handlerInput) {
       break;
   }
 }
+
+const keyMap = {
+  "UP": "▲",
+  "RIGHT": "▶",
+  "DOWN": "▼",
+  "LEFT": "◀",
+  "DELETE": "DELETE",
+}
 </script>
 
 <template>
-  <input
+  <button
     type="button"
     :disabled="puzzleState.isPuzzleSolved"
     @click="clickHandler(props.text)"
-    :value="props.text"
-  />
+  >
+    {{keyMap[props.text]}}
+  </button>
 </template>
 
 <style scoped>
-input {
+button {
   background-color: var(--primary-color-dark);
   border: none;
   color: var(--primary-color-light);
+  font-weight: bold;
   display: block;
   padding: 8px;
   width: 100%;
+  font-size: 1.2rem;
 }
 
-input:disabled {
+button:disabled {
   opacity: 0.5;
 }
 </style>
